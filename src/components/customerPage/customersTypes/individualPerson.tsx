@@ -38,3 +38,4 @@ export const IndividualPerson: FC = () => {
     </>
   );
 };
+// commit add
