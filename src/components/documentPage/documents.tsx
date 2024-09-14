@@ -1,6 +1,9 @@
 import { FC } from "react";
 import { Box } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet, Route } from "react-router-dom";
+import ContractTable from "./documentOptions/documentMainInfo";
+
+
 
 export const DocumentsPage: FC = () => {
   return (
@@ -47,6 +50,9 @@ export const DocumentsPage: FC = () => {
             </NavLink>
           </Box>
         </Box>
+      </Box>
+      <Box>
+        <Outlet/>
       </Box>
     </>
   );

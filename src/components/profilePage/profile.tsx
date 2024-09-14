@@ -1,4 +1,5 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { FC } from "react";
 import telegramm from "../../images/profileImages/telegram.svg";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +8,7 @@ import { RootState } from "../../store/store";
 import { ProfileData } from "./profileData";
 
 export const ProfilePage: FC = () => {
-  const passportDataProps = {
+  const passportDataProps: TextFieldProps = {
     variant: "standard",
     sx: { width: "375px" },
   };
@@ -82,7 +83,7 @@ export const ProfilePage: FC = () => {
           <p style={{ fontSize: 24 }} onClick={setBool}>
             Для ведения бухгалтерии в сервисе заполните следующие данные
           </p>
-
+     
           <Box>{profileData && <ProfileData />}</Box>
         </Box>
       </Box>
