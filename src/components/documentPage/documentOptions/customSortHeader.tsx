@@ -2,7 +2,9 @@ import React from "react";
 import { Box, Button, Tab, Tabs, TextField } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import TinyMCEEditor from "../../TinyTab/tinyMCEWeb";
-import { NavLink , Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import Act from "./Act/routesComponents/componentsOne";
+import ActLayout from "./Act/Act";
 // import InputAdornment from "@mui/material/InputAdornment";
 // import { TextFields } from "@mui/icons-material";
 
@@ -18,8 +20,6 @@ const CustomSortHeader: React.FC<CustomSortHeaderProps> = ({}) => {
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
-
-  
 
   const currencies = [
     {
@@ -229,18 +229,10 @@ const CustomSortHeader: React.FC<CustomSortHeaderProps> = ({}) => {
         </TabPanel>
         <TabPanel sx={{ padding: "10px 120px" }} value="2">
           {/* !!! */}
-         
-         <Outlet/>
+          <Outlet />
         </TabPanel>
         <TabPanel sx={{ padding: "10px 120px" }} value="3">
-        <TextField
-          id="filled-select-currency"
-          select
-          label="Select"
-          defaultValue="EUR"
-          helperText="Please select your currency"
-          variant="filled"
-        />
+        {/* <ActLayout/> */}
         </TabPanel>
         <TabPanel sx={{ padding: "10px 120px" }} value="4">
           Item Four

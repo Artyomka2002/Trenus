@@ -16,6 +16,9 @@ import CustomSortHeader from "./components/documentPage/documentOptions/customSo
 import ContractTable from "./components/documentPage/documentOptions/documentMainInfo";
 import Prilozhenie from "./components/documentPage/documentOptions/Приложение Пути/prilozhenie2";
 import PageAdd from "./components/documentPage/documentOptions/Приложение Пути/pageAdd";
+import ActLayout from "./components/documentPage/documentOptions/Act/Act";
+import Act from "./components/documentPage/documentOptions/Act/routesComponents/componentsOne";
+import ActSlide2 from "./components/documentPage/documentOptions/Act/routesComponents/componentTwo";
 
 function App() {
   const [sortDirection, setSortDirection] = useState<"asc" | "desc" | null>(
@@ -48,6 +51,10 @@ function App() {
             <Route path="prilozenie2" element={<Prilozhenie />} />
             <Route index element={<PageAdd />} />
           </Route>
+          <Route element={<ActLayout />}>
+            <Route path="prilozenie1" element={<Act />} />
+            <Route index element={<ActSlide2 />} />
+          </Route>
           <Route index element={<ContractTable />} />
         </Route>
         <Route path="main" element={<MainPage />} />
@@ -62,3 +69,4 @@ function App() {
 }
 
 export default App;
+// creacteActTabl
